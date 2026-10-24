@@ -1,8 +1,0 @@
-version: 2
-
-sources:
-  - name: stripe
-    database: raw       # Replace with your raw database name if different
-    schema: stripe     # Replace with your raw schema name if different
-    tables:
-      - name: payment
