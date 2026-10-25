@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_stripe__payment
+    description: Staging model for transforming data from the Stripe source
+    columns:
+      - name: payment_id
+        description: Primary key & unique identifier for the payment staging model
+      - name: order_id
+        description: Order identifier associated with a payment record
+      - name: payment_method
+        description: "{{ doc('payment_method') }}"
+      - name: payment_status
+        description: Indicates a successful or failed payment
+      - name: amount
+        description: Payment amount. Converted from cents to dollars.
+      - name: created
+        description: Timestamp that the payment took place at
+      - name: _batched_at
+        description: Timestamp the payment record was loaded into the data warehouse.

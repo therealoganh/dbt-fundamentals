@@ -3,6 +3,7 @@ version: 2
 sources:
   - name: stripe
     database: raw
+    description: Raw payment data from Stripe
     config: 
       freshness:
         warn_after:
